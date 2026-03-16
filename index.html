@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankomattapp</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id = "app">
+        <aside>
+            <img class="logo" src="./img/denizbank-logo.jpg" alt="denizbank-logo">
+        </aside>
+
+        <div class="screen">
+            <p id="message">Välkommen!</p>
+            <p id="balance"></p>
+            <p id="user-info"></p>
+        </div>
+
+        <div class="login-container">
+            
+            <input id="username" type="text" placeholder="användarnamn" > <br>
+            <input id="password" type="password" placeholder="lösenord" > <br>
+            <button id="btnlogin">Logga in</button>
+        </div>        
+
+        <div class="controls">
+                <button class="btn ins"onclick="deposit()" > Sätt in </button>
+                <button class="btn saldo" onclick="showBalance()" > Visa Saldo </button>
+                <button class="btn uttag" onclick="withdraw()"> Ta ut </button>
+        </div>
+
+        <div class="num__pad">
+
+            <div class="row">
+                <button class="btn" id="btn__1" value="1" onclick="inputNumber(1)">1</button>
+                <button class="btn" id="btn__2" value="2" onclick="inputNumber(2)">2</button>
+                <button class="btn" id="btn__3" value="3" onclick="inputNumber(3)">3</button>
+            </div>
+
+            <div class="row">
+                <button class="btn" id="btn__4" value="4" onclick="inputNumber(4)">4</button>
+                <button class="btn" id="btn__5" value="5" onclick="inputNumber(5)">5</button>
+                <button class="btn" id="btn__6" value="6" onclick="inputNumber(6)">6</button>
+            </div>
+
+
+            <div class="row">
+                <button class="btn" id="btn__7" value="7" onclick="inputNumber(7)">7</button>
+                <button class="btn" id="btn__8" value="8" onclick="inputNumber(8)">8</button>
+                <button class="btn" id="btn__9" value="9" onclick="inputNumber(9)">9</button>
+            </div>
+         
+
+            <div class="row">
+                <button class="btn" id="btn__C" value="C" onclick="clearInput()">C</button>
+                <button class="btn" id="btn__0" value="0" onclick="inputNumber(0)">0</button>
+                <button class="btn" id="btn__decimal" value="," onclick="inputNumber(',')">,</button>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="inputField" placeholder="Ange värde">
+        </div>
+
+            <div class="btnlogut">
+                <button id="btnlogut" onclick="logout()">Logga ut</button>
+            </div>
+            
+    </div>
+
+</body>
+</html>
